@@ -4,7 +4,7 @@ workflows:
     environment:
       xcode: latest
     scripts:
-      - cd ios
+      - cd ios   # passer dans le dossier ios où sont les sources et Package.swift
       - swift package generate-xcodeproj
       - xcodebuild -project iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator -configuration Debug build
     artifacts:
